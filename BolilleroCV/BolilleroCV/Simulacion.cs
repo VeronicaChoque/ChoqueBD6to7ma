@@ -8,5 +8,11 @@ namespace BolilleroCV
 {
     class Simulacion
     {
+        public Bolillero bolillero { get; set; }
+
+        public long simularSinHilos(List<int> jugada,long cantSimu)
+        {
+            return (long)bolillero.jugar(jugada, cantSimu); 
+        }
     }
 }
