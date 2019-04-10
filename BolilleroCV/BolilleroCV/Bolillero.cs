@@ -66,10 +66,15 @@ namespace BolilleroCV
             }
             return cont;
         }
+       
 
         public object Clone()
         {
-            throw new NotImplementedException();
+            Bolillero clon = new Bolillero();
+            clon.bolillasAdentro = new List<int>(this.bolillasAdentro);
+            clon.bolillasAfuera = new List<int>(this.bolillasAfuera);
+
+            return clon;
         }
     }
 }
