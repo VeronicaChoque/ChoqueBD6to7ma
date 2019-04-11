@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolilleroCV", "BolilleroCV\BolilleroCV.csproj", "{1566D1E1-48D9-4697-8247-0A35FF5BA86E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{9EA935E2-8136-4985-8229-6584684AAF6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{1566D1E1-48D9-4697-8247-0A35FF5BA86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1566D1E1-48D9-4697-8247-0A35FF5BA86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1566D1E1-48D9-4697-8247-0A35FF5BA86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA935E2-8136-4985-8229-6584684AAF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA935E2-8136-4985-8229-6584684AAF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA935E2-8136-4985-8229-6584684AAF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA935E2-8136-4985-8229-6584684AAF6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09EDE52D-D87E-4124-954E-FA22CC0D5C92}
 	EndGlobalSection
 EndGlobal
