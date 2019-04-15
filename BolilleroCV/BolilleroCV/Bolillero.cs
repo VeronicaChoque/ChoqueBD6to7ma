@@ -11,11 +11,25 @@ namespace BolilleroCV
         Random r;
         public List<int> bolillasAdentro { get; set; }
         public List<int> bolillasAfuera { get; set; }
-        public Bolillero()
+        public Bolillero(int cantBolillas)
         {
             var bolillasAdentro = new List<int>();
             var bolillasAfuera = new List<int>();
             var r = new Random(DateTime.Now.Millisecond);
+            crearBolillas(cantBolillas);
+        }
+
+        public Bolillero()
+        {
+            r = new Random();
+        }
+
+        private void crearBolillas(int cantBolillas)
+        {
+            for(int i=0;i<=cantBolillas;i++)
+            {
+                bolillasAdentro.Add(i);
+            }
         }
 
         private int indiceAlAzar()
@@ -71,6 +85,7 @@ namespace BolilleroCV
         public object Clone()
         {
             Bolillero clon = new Bolillero();
+           
             clon.bolillasAdentro = new List<int>(this.bolillasAdentro);
             clon.bolillasAfuera = new List<int>(this.bolillasAfuera);
 

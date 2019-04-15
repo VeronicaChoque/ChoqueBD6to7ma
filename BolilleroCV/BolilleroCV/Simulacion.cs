@@ -11,6 +11,7 @@ namespace BolilleroCV
         public Bolillero Bolillero { get; set; }
         public long CantidadSimulaciones { get; set; }
         public long CantidadAciertos { get; private set; }
+        public List<int> jugada { get; set; }
 
         public double PorcentajeAciertos
         {
@@ -20,13 +21,13 @@ namespace BolilleroCV
             }
         }
 
-        public long simularSinHilos(List<int> jugada,long CantidadSimulaciones)
+        public long simularSinHilos()
         {
             return (long)Bolillero.jugar(jugada, CantidadSimulaciones); 
         }
 
 
-        public void simularConHilos(int cantidadHilos, long CantidadSimulaciones, List<int> jugada)
+        public void simularConHilos(int cantidadHilos)
         {
             List<Task<long>> hilos = new List<Task<long>>();
             //List<Bolillero> bolillero = new List<Bolillero>();

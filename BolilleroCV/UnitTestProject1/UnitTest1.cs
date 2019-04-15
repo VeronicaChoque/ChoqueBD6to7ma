@@ -15,10 +15,17 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            bolillero = new Bolillero();
-            bolillero.bolillasAdentro = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            simulacion = new Simulacion();
+            bolillero = new Bolillero(50);         
 
+            simulacion = new Simulacion();
+            simulacion.Bolillero = bolillero;
+            simulacion.CantidadSimulaciones =10;
+            simulacion.jugada = new List<int> { 2, 4, 5 };
+
+            simulacion.simularSinHilos();
+
+            Assert.AreEqual(10,simulacion.CantidadAciertos);
+            
 
         }
     }
