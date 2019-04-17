@@ -12,20 +12,12 @@ namespace BolilleroCV
         public long CantidadSimulaciones { get; set; }
         public long CantidadAciertos { get; private set; }
         public List<int> jugada { get; set; }
+       
 
-        public double PorcentajeAciertos
+        public void simularSinHilos()
         {
-            get
-            {
-                return CantidadAciertos * 100 / CantidadSimulaciones;
-            }
+           CantidadAciertos= Bolillero.jugar(jugada, CantidadSimulaciones); 
         }
-
-        public long simularSinHilos()
-        {
-            return (long)Bolillero.jugar(jugada, CantidadSimulaciones); 
-        }
-
 
         public void simularConHilos(int cantidadHilos)
         {

@@ -11,22 +11,21 @@ namespace BolilleroCV
         Random r;
         public List<int> bolillasAdentro { get; set; }
         public List<int> bolillasAfuera { get; set; }
-        public Bolillero(int cantBolillas)
+        public Bolillero(int cantBolillas): this()
         {
-            var bolillasAdentro = new List<int>();
-            var bolillasAfuera = new List<int>();
-            var r = new Random(DateTime.Now.Millisecond);
+            bolillasAdentro = new List<int>();
+            bolillasAfuera = new List<int>();
             crearBolillas(cantBolillas);
         }
 
         public Bolillero()
         {
-            r = new Random();
+            r = new Random(DateTime.Now.Millisecond);
         }
 
         private void crearBolillas(int cantBolillas)
         {
-            for(int i=0;i<=cantBolillas;i++)
+            for(int i=1;i<=cantBolillas;i++)
             {
                 bolillasAdentro.Add(i);
             }
