@@ -48,6 +48,7 @@ namespace BolilleroCV
             bolillasAdentro.Remove(bolilla);
             bolillasAfuera.Add(bolilla);
         }
+
         public void reingresarBolillas()
         {
             bolillasAdentro.AddRange(bolillasAfuera);
